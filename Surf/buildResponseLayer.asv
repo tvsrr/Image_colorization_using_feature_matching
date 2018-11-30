@@ -1,0 +1,18 @@
+function buildResponseLayer(r,Img,thresh,octaves,initsample)
+
+step = r.step;
+b = fix((rl.filter - 1) / 2 + 1);
+l = fix(rl.filter / 3);
+w = fix(rl.filter);
+
+inverse_area = 1 / double(w * w);
+img=FastHessianData.img;
+
+[ac,ar]=ndgrid(0:rl.width-1,0:rl.height-1);
+ar=ar(:); ac=ac(:);
+
+% get the image coordinates
+r = int32(ar * step);
+c = int32(ac * step);
+
+end

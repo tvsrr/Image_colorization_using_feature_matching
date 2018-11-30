@@ -1,0 +1,17 @@
+function [ipts,np] = Interpolate_Extremept(r, c,  t,  m,  b,  ipts, np)
+
+D = BuildResponse(r,c,t,m,b);
+H = BuildHessian(r,c,t,m,b);
+
+Of = -H/D;
+O = [Of(1,1),Of(2,1),Of(3,1)];
+
+
+
+end
+
+function D = BuildDerivative(r,c,t,m,b)
+
+
+
+end
